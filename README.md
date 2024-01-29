@@ -15,4 +15,5 @@ Versa X is an AI assistant chrome extension. Through parsing relevant data from 
 * Dashboard interface for tracking usage and history.
 
 ## Demo
-https://github.com/Zume-z/ai-extension/assets/36926781/ccecb328-c203-4173-966b-c38a4dcf9a96
+https://github.com/Zume-z/ai-extension/assets/36926781/3a511747-dcad-4667-8a93-004a59120d7b
+
