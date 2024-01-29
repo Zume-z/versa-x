@@ -1,0 +1,38 @@
+{
+  "manifest_version": 3,
+  "name": "Versa X - Contextually aware AI assistant",
+  "version": "1.0.0",
+  "host_permissions": ["https://www.versax.app/*"],
+  "action": { "default_title": "Versa X - Contextually aware AI browser assistant." },
+  "description": "A personal AI browser assistant. ",
+  "icons": {
+    "16": "src/assets/img/icon16.png",
+    "48": "src/assets/img/icon48.png",
+    "128": "src/assets/img/icon128.png"
+  },
+  "permissions": ["activeTab", "tabs", "favicon"],
+
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["src/main.tsx"]
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["src/assets/img/index.png"],
+      "matches": ["<all_urls>"]
+    }
+  ],
+  "commands": {
+    "_execute_action": {
+      "suggested_key": {
+        "default": "Shift+Ctrl+O",
+        "mac": "Shift+Command+O"
+      }
+    }
+  },
+  "background": {
+    "service_worker": "src/background/background.ts"
+  }
+}

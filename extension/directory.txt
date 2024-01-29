@@ -1,0 +1,15 @@
+//  {/* DIRECTORY */}
+//  <div className="absolute right-0 top-0 z-[999999999994] space-x-2 ">
+//  <button className="text-base" onClick={() => setPage(DIR.INDEX)}>
+//    Index
+//  </button>
+//  <button className="text-base" onClick={() => setPage(DIR.RESPONSE)}>
+//    Response
+//  </button>
+//  <button className="text-base" onClick={() => setPage(DIR.ERROR)}>
+//    error
+//  </button>
+//  <button className="text-base" onClick={() => scrapePage()}>
+//    Scrape Page
+//  </button>
+// </div>
