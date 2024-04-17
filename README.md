@@ -10,7 +10,7 @@ Versa X is an AI assistant chrome extension. Through parsing relevant data from 
 
 ## Features
 * Access to Open AI models through chat window interface.
-* Contextually aware assistant, pre-prompted with site data.
+* Contextually aware assistant, pre-prompted with relevant site data.
 * Website specific prompt suggestions.
 * Dashboard interface for tracking usage and history.
 
