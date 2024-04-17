@@ -16,7 +16,6 @@ export default function Layout({ children, className }: LayoutProps) {
         <meta name="Versa X is a contextually aware AI assistant seamlessly integrated into your web browser." content="Versa X" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
       <div>
         <main className={`mx-auto max-w-7xl px-4 md:px-16 ${className}`}>{children}</main>
       </div>

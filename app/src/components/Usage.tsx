@@ -46,13 +46,7 @@ export default function Usage({ subData }: UsageProps) {
           </div>
 
           <div className="my-4 flex items-center space-x-5">
-            <Progress.Root
-              className=" relative -z-10 h-[20px] w-full overflow-hidden rounded border border-gray-800 bg-gray-800"
-              style={{
-                transform: 'translateZ(0)',
-              }}
-              value={progress}
-            >
+            <Progress.Root className=" relative -z-10 h-[20px] w-full overflow-hidden rounded border border-gray-800 bg-gray-800" style={{ transform: 'translateZ(0)' }} value={progress}>
               <Progress.Indicator className="ease-[cubic-bezier(0.65, 0, 0.35, 1)] h-full w-full rounded bg-green-500 transition-transform duration-[660ms]" style={{ transform: `translateX(-${100 - progress}%)` }} />
             </Progress.Root>
             <div>{round2Dec(progress)}%</div>

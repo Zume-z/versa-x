@@ -4,8 +4,8 @@ import { api } from '@/utils/api/api'
 import ButtonLink from './ButtonLink'
 import { useSession } from 'next-auth/react'
 import { Disclosure } from '@headlessui/react'
-import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import { CONTACT_HREF } from '@/utils/constants/directory'
+import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 
 export default function NavIndex() {
   const { data: session, status: sessionStatus } = useSession()

@@ -20,8 +20,8 @@ export async function emailConfig(params: { identifier: string; url: string; pro
 }
 
 export function html(params: { url: string; host: string; theme: Theme }) {
-  const { url } = params // theme
-  // const escapedHost = host.replace(/\./g, '&#8203;.')
+  const { url } = params
+
   const color = {
     background: '#fff',
     text: '#000000',

@@ -76,6 +76,3 @@ export default function Features() {
     </div>
   )
 }
-
-// VersaX is a contextually aware AI assistant seamlessly integrated into your web browser. By leveraging a deep understanding of the website you're visiting, VersaX delivers relevant and accurate answers through a convenient conversation window right in your browser.
-//               Whether you're conducting in-depth research, crafting engaging content, or seeking valuable insights, VersaX is purpose-built to assist you along the way. With this ability streamlining tedious and time-consuming tasks you're free to focus on what to do what you do best.

@@ -2,10 +2,10 @@ import { z } from 'zod'
 import { api } from '@/utils/api/api'
 import { useRouter } from 'next/router'
 import { CheckIcon } from '@radix-ui/react-icons'
-import { Dispatch, Fragment, SetStateAction, useEffect, useState } from 'react'
 import { Dialog, Transition } from '@headlessui/react'
 import { SubType } from '@/server/api/routers/stripe'
 import { ModalType } from '@/utils/constants/interfaces'
+import { Dispatch, Fragment, SetStateAction, useEffect, useState } from 'react'
 import { ExclamationTriangleIcon, XMarkIcon } from '@heroicons/react/24/outline'
 
 interface ModalProps {

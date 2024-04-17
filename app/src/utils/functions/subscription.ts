@@ -10,13 +10,6 @@ import { UseTRPCQueryResult } from '@trpc/react-query/shared'
 import { convDate, convTimeStamp, trialEndDate } from './convert'
 import { subscriptionModel as subModel } from '../constants/subscriptionModel'
 
-// OLD
-// export enum PRODUCT_ID {
-//   BASIC = 'prod_NzHgcec58VLlBB',
-//   PREMIUM = 'prod_NzIvZgAafimPr8',
-//   PREMIER = 'prod_Nzf8oJQVhed48D',
-// }
-
 export enum PRODUCT_ID {
   BASIC = 'prod_OAUsZuJtXau49W',
   PREMIUM = 'prod_OAUtKvvqkSp6VH',
@@ -138,89 +131,3 @@ export const formatSessionData = (session: SessionData): SessionData => {
   // No Subscription
   return { ...session, validSession: false, error: ERROR_CODE.SUBSCRIPTION_NOT_FOUND }
 }
-
-// // Check if subscription is valid
-// export const checkValidSubscription = (data: SessionData) => {
-//   // Admin
-//   if (data?.admin) return { res: true }
-
-//   // Active Subscription
-//   if (data.subscriptionStatus == 'active') {
-//     switch (data?.productId) {
-//       case PRODUCT_ID.BASIC:
-//         // Basic Subscription
-//         if (data.tokenCount < subModel.basic.tokens) return { res: true }
-//         else return { res: false, error: ERROR_CODE.TOKEN_LIMIT_EXCEEDED }
-
-//       case 'prod_NzIvZgAafimPr8':
-//         // Premium Subscription
-//         if (data.tokenCount < subModel.premium.tokens) return { res: true }
-//         else return { res: false, error: ERROR_CODE.TOKEN_LIMIT_EXCEEDED }
-
-//       case 'prod_Nzf8oJQVhed48D':
-//         // Unlimited Subscription
-//         return { res: true }
-//     }
-//     return { res: false, error: ERROR_CODE.SUBSCRIPTION_NOT_FOUND }
-//   }
-
-//   // Active Trial Subscription
-//   if (checkActiveTrial(data?.trialStartedAt) && !data?.subscriptionStatus) {
-//     // Trial Subscription
-//     if (data.tokenCount < subModel.freeTrial.tokens) return { res: true }
-//     else return { res: false, error: ERROR_CODE.TOKEN_LIMIT_EXCEEDED }
-//   }
-
-//   // Past Due Subscription
-//   if (data?.subscriptionStatus == 'past_due') {
-//     return { res: false, error: ERROR_CODE.PAYMENT_PAST_DUE }
-//   }
-
-//   // No Subscription
-//   return { res: false, error: ERROR_CODE.SUBSCRIPTION_NOT_FOUND }
-// }
-
-// export const configValidSubscription = (data: SessionData) => {
-//   const session: SesssionUpdate = data
-
-//   // Admin
-//   if (data?.admin) return { ...session, tokenCountExceeded: false }
-
-//   // Active Subscription
-//   if (data.subscriptionStatus == 'active') {
-//     switch (data?.productId) {
-//       case 'prod_NzHgcec58VLlBB':
-//         // Basic Subscription
-//         session.subTier = 'BASIC'
-//         if (data.tokenCount < subModel.basic.tokens) return { ...session, tokenCountExceeded: false }
-//         else return { ...session, tokenCountExceeded: true, error: ERROR_CODE.TOKEN_LIMIT_EXCEEDED }
-
-//       case 'prod_NzIvZgAafimPr8':
-//         // Premium Subscription
-//         session.subTier = 'PREMIUM'
-//         if (data.tokenCount < subModel.premium.tokens) return { ...session, tokenCountExceeded: false }
-//         else return { ...session, tokenCountExceeded: true, error: ERROR_CODE.TOKEN_LIMIT_EXCEEDED }
-
-//       case 'prod_Nzf8oJQVhed48D':
-//         // Unlimited Subscription
-//         return { ...session, subTier: 'PREMIER', tokenCountExceeded: false }
-//     }
-//     return session
-//   }
-
-//   // Past Due Subscription
-//   if (data?.subscriptionStatus == 'past_due') {
-//     return { ...session, pastDue: true, error: ERROR_CODE.PAYMENT_PAST_DUE }
-//   }
-
-//   // Active Trial Subscription
-//   if (checkActiveTrial(data?.trialStartedAt) && !data?.subscriptionStatus) {
-//     // Trial Subscription
-//     session.subTier = 'TRIAL'
-//     if (data.tokenCount < subModel.freeTrial.tokens) return { ...session, tokenCountExceeded: false }
-//     else return { ...session, tokenCountExceeded: true, error: ERROR_CODE.TOKEN_LIMIT_EXCEEDED }
-//   }
-
-//   // No Subscription
-//   return { ...session, error: ERROR_CODE.SUBSCRIPTION_NOT_FOUND }
-// }

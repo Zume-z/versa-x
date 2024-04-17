@@ -4,8 +4,6 @@ import { Session } from 'next-auth'
 import { useRouter } from 'next/router'
 import { formatTokens, getUserName } from '@/utils/functions/convert'
 import { SubscriptionData } from '@/utils/functions/subscription'
-import { z } from 'zod'
-import { TRPCRequest } from '@trpc/server/rpc'
 
 interface AccountProps {
   session: Session | null
@@ -23,7 +21,6 @@ export default function Account({ session, subData, manageBilling, settingsData 
         <div className="text-2xl">Account</div>
         <div className="text-sm">Manage your account.</div>
       </div>
-
       <div className="mt-6 space-y-4">
         <div className="py-2">
           <div>Profile</div>

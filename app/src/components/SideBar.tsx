@@ -1,7 +1,7 @@
 import React from 'react'
 import { useRouter } from 'next/router'
+import { CONTACT_HREF } from '@/utils/constants/directory'
 import { SubscriptionData } from '@/utils/functions/subscription'
-import { CONTACT_HREF, VERSA_HREF } from '@/utils/constants/directory'
 
 export default function SideBar({ subData, manageBilling }: { subData: SubscriptionData | null; manageBilling: () => Promise<void> }) {
   const { asPath, push } = useRouter()

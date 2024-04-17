@@ -5,14 +5,11 @@ import { type GetServerSidePropsContext } from 'next'
 import GoogleProvider from 'next-auth/providers/google'
 import { PrismaAdapter } from '@next-auth/prisma-adapter'
 import { getServerSession, type NextAuthOptions, type DefaultSession } from 'next-auth'
-// import { emailConfig } from '@/utils/functions/emailconfig'
 
 declare module 'next-auth' {
   interface Session extends DefaultSession {
     user: {
       id: string
-      // ...other properties
-      // role: UserRole;
     } & DefaultSession['user']
   }
 }
@@ -26,7 +23,6 @@ export const authOptions: NextAuthOptions = {
         id: user.id,
       },
     }),
-
     // error: async (error, _ctx) => {
     //   // Send to Sentry
     //   // await Sentry.captureException(error);

@@ -24,7 +24,6 @@ async function build() {
     if (file.startsWith('service-worker-loader')) {
       fs.readFile(_dir + '/' + file, 'utf-8', function (err, data) {
         if (err) throw err
-        // './assets/background.ts.d481bc82.js';
         const newValue = data.replace(/assets\/background.ts.*.js/g, 'assets/background.js')
         fs.writeFile(_dir + '/' + file, newValue, 'utf-8', function (err) {
           if (err) throw err

@@ -1,7 +1,7 @@
 export enum VERSA_HREF {
   HOME = 'http://localhost:3000',
-  DASHBOARD = 'https://www.versax.app/dashboard', //https://www.versax.app/dashboard // http://localhost:3000/dashboard
-  VERIFY_REQ = '/auth/verify-request?email=', // https://www.versax.app/auth/verify-request?email=
+  DASHBOARD = 'https://www.versax.app/dashboard',
+  VERIFY_REQ = '/auth/verify-request?email=',
   DOWNLOAD = 'https://chrome.google.com/webstore/category/extensions',
 }
 

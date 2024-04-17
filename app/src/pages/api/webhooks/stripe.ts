@@ -69,7 +69,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         // Unexpected event type
       }
 
-      // record the event in the database
+      // Record the event in the database
       await prisma.stripeEvent.create({
         data: {
           id: event.id,
